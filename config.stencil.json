@@ -2,7 +2,9 @@
   "customLayouts": {
     "brand": {},
     "category": {},
-    "page": {},
+    "page": {
+      "dummy.html":"/dummy/"
+    },
     "product": {}
   },
   "normalStoreUrl": "https://aishwarya-dev.mybigcommerce.com",
