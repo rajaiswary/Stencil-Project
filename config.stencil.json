@@ -3,7 +3,8 @@
     "brand": {},
     "category": {},
     "page": {
-      "dummy.html":"/dummy/"
+      "dummy.html":"/dummy/",
+      "category.html":"/category/"
     },
     "product": {}
   },
