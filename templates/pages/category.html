@@ -23,7 +23,7 @@ category:
     <title>Daily Shop | Home</title>
     {{{stylesheet '/assets/css/customtheme.css'}}}
     {{{stylesheet '/assets/css/theme.css'}}}   
-    <link href="assets/custom/css/font-awesome.css" rel="stylesheet">
+    <link href="../../assets/custom/css/font-awesome.css" rel="stylesheet">
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
@@ -266,8 +266,7 @@ category:
               <div class="aa-recently-views">
                 <ul>
 
-                  {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
-
+                 {{>components/custom/recentProducts}}
                   <!-- <li>
                     <a href="#" class="aa-cartbox-img"><img alt="img" src="img/woman-small-2.jpg"></a>
                     <div class="aa-cartbox-info">

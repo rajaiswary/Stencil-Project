@@ -1,4 +1,4 @@
- <ul class="aa-catg-nav" >
+ <!-- <ul class="aa-catg-nav" >
     <li>
         <a  href="/shop-all/" aria-label="Shop All">
 Shop All
@@ -32,4 +32,28 @@ Utility
          
 
 </ul> 
+ -->
+
+
+ 
+   
+    <ul class="aa-catg-nav{{#if theme_settings.navigation_design '!==' 'simple'}} navPages-list-depth-max{{/if}}">
+        {{#each categories}}
+            <li >
+            {{#if ../theme_settings.navigation_design '===' 'simple'}}
+                {{> components/common/navigation-list}}
+            {{/if}}
+            {{#if ../theme_settings.navigation_design '===' 'alternate'}}
+                {{> components/common/navigation-list-alternate}}
+            {{/if}}
+            </li>
+        {{/each}}
+        {{#unless theme_settings.hide_content_navigation}}
+            {{#each pages}}
+                 
+             {{/each}}
+        {{/unless}}
+    </ul>
+    
+
 
