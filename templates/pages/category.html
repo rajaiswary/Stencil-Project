@@ -278,10 +278,11 @@ category:
             <!-- single sidebar -->
             <div class="aa-sidebar-widget">
               <h3>Recently Views</h3>
+
               <div class="aa-recently-views">
                 <ul>
 
-                  {{>components/products/customtop products=products.top_sellers}}
+                  {{>components/products/customtop products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
 
                   <!-- <li>
                     <a href="#" class="aa-cartbox-img"><img alt="img" src="img/woman-small-2.jpg"></a>
@@ -311,9 +312,13 @@ category:
             <div class="aa-sidebar-widget">
               <h3>Top Rated Products</h3>
               <!-- <div class="aa-recently-views"> -->
+
+                <ul>
+                  {{> components/products/new products=category.products}}
+
+                </ul>
                 
 
-                  {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
 
                   <!-- <li>
                     <a href="#" class="aa-cartbox-img"><img alt="img" src="img/woman-small-2.jpg"></a>
