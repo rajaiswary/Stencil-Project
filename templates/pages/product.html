@@ -11,15 +11,46 @@ product:
 ---
 {{inject 'productId' product.id}}
 
-{{#partial "page"}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>Daily Shop | Home</title>
+    
+    {{{stylesheet '/assets/css/customtheme.css'}}}
+    {{{stylesheet '/assets/css/theme.css'}}}   
+    <link href="../../assets/custom/css/font-awesome.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+</head>
+<body> 
+ <!-- wpf loader Two -->
+  <div id="wpf-loader-two">          
+    <div class="wpf-loader-two-inner">
+      <span>Loading</span>
+    </div>
+  </div> 
+  <!-- / wpf loader Two -->       
+<!-- SCROLL TOP BUTTON -->
+  <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
+<!-- END SCROLL TOP BUTTON -->
+{{> layout/custombase}}
 
-    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+  <!-- / header section -->
+  <!-- menu -->
+  <section id="menu">
+    {{>components/common/navigation-menu}}
+  </section>
 
-    {{#each product.shipping_messages}}
-        {{> components/common/alert/alert-info message}}
-    {{/each}}
-
-    <div>
+  <section id="aa-catg-head-banner">
+    <img src="../../assets/custom/img/6083501.jpg" alt="fashion img">
+   
+   </section>
+   <section id="aa-product-details">
+    <div class="container">
         {{> components/products/product-view}}
 
         {{{region name="product_below_content"}}}
@@ -35,6 +66,43 @@ product:
         {{> components/products/tabs}}
     </div>
 
-    {{> components/products/schema}}
-{{/partial}}
-{{> layout/base}}
+   </section>
+
+
+
+
+
+   <footer id="aa-footer">
+    <!-- footer bottom -->
+    {{>components/common/footer}}
+</footer>
+<!-- / footer -->
+
+
+
+
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="../../assets/custom/js/bootstrap.js"></script>
+  <!-- SmartMenus jQuery plugin -->
+  <script type="text/javascript" src="../../assets/custom/js/jquery.smartmenus.js"></script>
+  <!-- SmartMenus jQuery Bootstrap Addon -->
+  <script type="text/javascript" src="../../assets/custom/js/jquery.smartmenus.bootstrap.js"></script>
+  <!-- To Slider JS -->
+  <script src="../../assets/custom/js/sequence.js"></script>
+  <script src="../../assets/custom/js/sequence-theme.modern-slide-in.js"></script>
+  <!-- Product view slider -->
+  <script type="text/javascript" src="../../assets/custom/js/jquery.simpleGallery.js"></script>
+  <script type="text/javascript" src="../../assets/custom/js/jquery.simpleLens.js"></script>
+  <!-- slick slider -->
+  <script type="text/javascript" src="../../assets/custom/js/slick.js"></script>
+  <!-- Price picker slider -->
+  <script type="text/javascript" src="../../assets/custom/js/nouislider.js"></script>
+  <!-- Custom js -->
+  <script src="../../assets/custom/js/custom.js"></script>
+
+  </body>
+  
+</html>
+
