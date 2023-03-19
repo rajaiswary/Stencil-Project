@@ -38,7 +38,7 @@ category:
     <title>Daily Shop | Home</title>
     {{{stylesheet '/assets/css/customtheme.css'}}}
     {{{stylesheet '/assets/css/theme.css'}}}   
-    <link href="../../assets/custom/css/font-awesome.css" rel="stylesheet">
+
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
@@ -57,7 +57,7 @@ category:
   
   
     <!-- Start header section -->
-    {{> layout/custombase}}
+    {{> layout/custom/custombase}}
 
   
     <!-- / header section -->
@@ -282,7 +282,7 @@ category:
               <div class="aa-recently-views">
                 <ul>
 
-                  {{>components/products/customtop products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
+                  {{>components/custom/customtop products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
 
                   <!-- <li>
                     <a href="#" class="aa-cartbox-img"><img alt="img" src="img/woman-small-2.jpg"></a>
@@ -314,7 +314,7 @@ category:
               <div class="aa-recently-views">
 
                 <ul>
-                  {{> components/products/customnew products=products.new columns=theme_settings.homepage_new_products_column_count}}
+                  {{> components/custom/customnew products=products.new columns=theme_settings.homepage_new_products_column_count}}
 
 
                 </ul>
