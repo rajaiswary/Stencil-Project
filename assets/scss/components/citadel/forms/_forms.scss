@@ -224,6 +224,7 @@
     .button {
         @include breakpoint("large") {
             width: auto;
+            background-color: #ff6666;
         }
     }
 

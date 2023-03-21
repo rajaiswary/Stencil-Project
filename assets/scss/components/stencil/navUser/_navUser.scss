@@ -317,7 +317,8 @@
 // -----------------------------------------------------------------------------
 
 .countPill {
-    background-color: stencilColor("navUser-indicator-backgroundColor");
+    // background-color: stencilColor("navUser-indicator-backgroundColor");
+    background-color: #ff6666;
     border-radius: 50%;
     color: color("whites", "bright");
     display: none;
