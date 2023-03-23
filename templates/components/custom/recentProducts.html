@@ -1,29 +1,45 @@
+<nav class="navUser">
+    {{#or customer (unless settings.hide_price_from_guests)}}
+        {{> components/common/currency-selector}}
+    {{/or}}
 
-
-
-<h2 class="page-heading">{{lang 'products.top' }}</h2>
-
-<ul class="productGrid productGrid--maxCol4" data-product-type="top_sellers"  >
-
-    {{#each products}}
-   
-    <li class="product">
-        {{>components/products/customcard settings=../settings theme_settings=../theme_settings customer=../customer event="list" position=(add @index 1)}}
-    </li>
-
-
-
-
-    {{/each}}
-
-                </ul>
-
-
-
-
-
-
-
-
-
-
+    <ul class="navUser-section navUser-section--alt">
+        
+        
+        
+        <li class="navUser-item navUser-item--account">
+            {{#if customer}}
+                <a class="navUser-action"
+                   href="{{urls.account.index}}"
+                   aria-label="{{lang 'common.account'}}"
+                >
+                    {{lang 'common.account'}}
+                </a>
+                <a class="navUser-action"
+                   href="{{urls.auth.logout}}"
+                   aria-label="{{lang 'common.logout'}}"
+                >
+                    {{lang 'common.logout'}}
+                </a>
+            {{else}}
+                <a class="navUser-action"
+                   href="{{urls.auth.login}}"
+                   aria-label="{{lang 'common.login'}}"
+                >
+                    {{lang 'common.login'}}
+                </a>
+                {{#if settings.account_creation_enabled}}
+                    <span class="navUser-or">{{lang 'common.or'}}</span>
+                    <a class="navUser-action"
+                       href="{{urls.auth.create_account}}"
+                       aria-label="{{lang 'common.sign_up'}}"
+                    >
+                        {{lang 'common.sign_up'}}
+                    </a>
+                {{/if}}
+            {{/if}}
+        </li>
+        
+    </ul>
+    
+</nav>
